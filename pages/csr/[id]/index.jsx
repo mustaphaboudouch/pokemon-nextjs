@@ -64,12 +64,14 @@ const PokemonDetails = () => {
 							))}
 						</div>
 						<table className={styles.stats}>
-							{pokemon.stats.map((stat) => (
-								<tr key={stat.name}>
-									<th>{stat.name}</th>
-									<td>{stat.value}%</td>
-								</tr>
-							))}
+							<tbody>
+								{pokemon.stats.map((stat) => (
+									<tr key={stat.name}>
+										<th>{stat.name}</th>
+										<td>{stat.value}%</td>
+									</tr>
+								))}
+							</tbody>
 						</table>
 					</div>
 				</div>
