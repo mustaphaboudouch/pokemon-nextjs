@@ -1,0 +1,73 @@
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 4rem auto;
+}
+
+.backlink {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 1.5rem;
+	transition: all 0.3s;
+}
+.backlink svg {
+	width: 2rem;
+}
+.backlink span {
+	font-size: 0.9rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.backlink:hover {
+	color: rgb(79, 70, 229);
+}
+
+.infos {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 3rem;
+}
+
+.name {
+	font-size: 2.75rem;
+	font-weight: 800;
+	margin-bottom: 0.5rem;
+}
+
+.types {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-bottom: 2rem;
+}
+.types span {
+	font-size: 0.8rem;
+	font-weight: 600;
+	white-space: nowrap;
+	padding: 0.25rem 0.5rem;
+	border-radius: 0.25rem;
+	background-color: rgb(238, 242, 255);
+	color: rgb(79, 70, 229);
+}
+
+.stats {
+	width: 100%;
+	border: 1px solid #000000;
+}
+.stats th {
+	text-align: left;
+	padding: 0.5rem 1rem;
+	border: 1px solid #e2e5e8;
+}
+.stats td {
+	text-align: center;
+	padding: 0.5rem 1rem;
+	border: 1px solid #e2e5e8;
+}
+
+@media only screen and (max-width: 700px) {
+	.infos {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
