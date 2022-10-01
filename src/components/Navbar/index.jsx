@@ -10,14 +10,14 @@ const Navbar = ({ hideMenu }) => {
 		<nav className={styles.navbar}>
 			<div className={styles.logo}>
 				<Link href='/'>
-					<>
-						<a>
+					<a>
+						<span>
 							Poke<span>mon</span>
-						</a>
-						<a>
+						</span>
+						<span>
 							P<span>m</span>
-						</a>
-					</>
+						</span>
+					</a>
 				</Link>
 			</div>
 			{!hideMenu && (

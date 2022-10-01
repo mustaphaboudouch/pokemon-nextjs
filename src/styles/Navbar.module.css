@@ -17,10 +17,10 @@
 	letter-spacing: 1px;
 	color: rgb(79, 70, 229);
 }
-.logo a:last-child {
+.logo a > span:last-child {
 	display: none;
 }
-.logo a span {
+.logo a > span > span {
 	font-weight: 900;
 	color: #000000;
 }
@@ -60,10 +60,10 @@
 	.logo {
 		width: 5rem;
 	}
-	.logo a:first-child {
+	.logo a > span:first-child {
 		display: none;
 	}
-	.logo a:last-child {
+	.logo a > span:last-child {
 		display: block;
 	}
 
