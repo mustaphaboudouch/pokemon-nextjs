@@ -35,6 +35,9 @@
 .menu a:hover {
 	color: rgb(79, 70, 229);
 }
+.active {
+	color: rgb(79, 70, 229);
+}
 
 .github {
 	width: 7rem;

@@ -1,8 +1,11 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import styles from '../../styles/Navbar.module.css';
 
 const Navbar = ({ hideMenu }) => {
+	const { pathname } = useRouter();
+
 	return (
 		<nav className={styles.navbar}>
 			<div className={styles.logo}>
@@ -20,16 +23,16 @@ const Navbar = ({ hideMenu }) => {
 			{!hideMenu && (
 				<div className={styles.menu}>
 					<Link href='/csr'>
-						<a>CSR</a>
+						<a className={pathname === '/csr' ? styles.active : ''}>CSR</a>
 					</Link>
 					<Link href='/ssr'>
-						<a>SSR</a>
+						<a className={pathname === '/ssr' ? styles.active : ''}>SSR</a>
 					</Link>
 					<Link href='/ssg'>
-						<a>SSG</a>
+						<a className={pathname === '/ssg' ? styles.active : ''}>SSG</a>
 					</Link>
 					<Link href='/isr'>
-						<a>ISR</a>
+						<a className={pathname === '/isr' ? styles.active : ''}>ISR</a>
 					</Link>
 				</div>
 			)}
