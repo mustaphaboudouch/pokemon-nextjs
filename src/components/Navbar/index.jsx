@@ -6,6 +6,8 @@ import styles from '../../styles/Navbar.module.css';
 const Navbar = ({ hideMenu }) => {
 	const { pathname } = useRouter();
 
+	console.log('pathname :::', pathname);
+
 	return (
 		<nav className={styles.navbar}>
 			<div className={styles.logo}>
@@ -23,16 +25,24 @@ const Navbar = ({ hideMenu }) => {
 			{!hideMenu && (
 				<div className={styles.menu}>
 					<Link href='/csr'>
-						<a className={pathname === '/csr' ? styles.active : ''}>CSR</a>
+						<a className={pathname.match('^/csr.*$') ? styles.active : ''}>
+							CSR
+						</a>
 					</Link>
 					<Link href='/ssr'>
-						<a className={pathname === '/ssr' ? styles.active : ''}>SSR</a>
+						<a className={pathname.match('^/ssr.*$') ? styles.active : ''}>
+							SSR
+						</a>
 					</Link>
 					<Link href='/ssg'>
-						<a className={pathname === '/ssg' ? styles.active : ''}>SSG</a>
+						<a className={pathname.match('^/ssg.*$') ? styles.active : ''}>
+							SSG
+						</a>
 					</Link>
 					<Link href='/isr'>
-						<a className={pathname === '/isr' ? styles.active : ''}>ISR</a>
+						<a className={pathname.match('^/isr.*$') ? styles.active : ''}>
+							ISR
+						</a>
 					</Link>
 				</div>
 			)}
