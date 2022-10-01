@@ -61,7 +61,7 @@ const Home = () => {
 							</svg>
 						</a>
 					</Link>
-					<Link href='#'>
+					<Link href='/ssg'>
 						<a>
 							Static Site Generation
 							<svg
