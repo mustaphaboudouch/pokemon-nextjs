@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Head from 'next/head';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -19,23 +20,29 @@ const PokemonList = () => {
 	}, []);
 
 	return (
-		<div className={styles.container}>
-			<h1 className={styles.title}>Pokemon List</h1>
-			<h2 className={styles.subtitle}>Client Side Rendering</h2>
-			<div className={styles.grid}>
-				{pokemons.map((pokemon) => (
-					<Link key={pokemon.id} href={`/csr/${pokemon.id}`}>
-						<a className={styles.card}>
-							<img
-								src={`https://jherr-pokemon.s3.us-west-1.amazonaws.com/${pokemon.image}`}
-								alt={pokemon.name}
-							/>
-							<h3>{pokemon.name}</h3>
-						</a>
-					</Link>
-				))}
-			</div>
-		</div>
+		<>
+			<Head>
+				<title>Pokemon - Client Side Rendering</title>
+			</Head>
+
+			<main className={styles.container}>
+				<h1 className={styles.title}>Pokemon List</h1>
+				<h2 className={styles.subtitle}>Client Side Rendering</h2>
+				<div className={styles.grid}>
+					{pokemons.map((pokemon) => (
+						<Link key={pokemon.id} href={`/csr/${pokemon.id}`}>
+							<a className={styles.card}>
+								<img
+									src={`https://jherr-pokemon.s3.us-west-1.amazonaws.com/${pokemon.image}`}
+									alt={pokemon.name}
+								/>
+								<h3>{pokemon.name}</h3>
+							</a>
+						</Link>
+					))}
+				</div>
+			</main>
+		</>
 	);
 };
 
