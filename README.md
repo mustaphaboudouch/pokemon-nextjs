@@ -1,34 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="https://pngimg.com/uploads/pokemon_logo/pokemon_logo_PNG13.png" alt="Logo" height="90">
+  </a>
+  <h3 align="center">Pokemon - NextJS</h3>
+  <p align="center">
+    Pokemon App using different forms of Pre-rendering in NextJS.
+    <br />
+    <a href="https://pokemon-app-plum-one.vercel.app/">
+	    View Demo »
+    </a>
+  </p>
+</div>
 
-## Getting Started
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+	<li><a href="#installation">Installation</a></li>
+    <li><a href="#files-structure">Files Structure</a></li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
 
-First, run the development server:
+## Installation
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+If you want to run the project on your own, please follow these steps :
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Clone the Project (`git clone git@github.com:mustaphaboudouch/pokemon-app.git`)
+2. Move to the project folder
+3. Install dependencies (`npm install`)
+4. Run server (`npm run dev`)
+5. Let's go : <a href="http://localhost:3000">http://localhost:3000</a>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Files Structure
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<pre>
+pokemon-app
+├── src
+│   ├── components
+│   │   └── Navbar
+│   │       └── index.jsx : <i>Navbar component</i>
+│   ├── pages
+│   │   ├── _app.js : <i>Next.js App component</i>
+│   │   ├── index.jsx : <i>Home page</i>
+│   │   ├── csr : <i>Client side rendering</i>
+│   │   │   ├── index.jsx : <i>Pokemons list page</i>
+│   │   │   └── [id]
+│   │   │       └── index.jsx : <i>Pokemon details page</i>
+│   │   ├── isr : <i>Incremental static regeneration</i>
+│   │   │   ├── index.jsx : <i>Pokemons list page</i>
+│   │   │   └── [id]
+│   │   │       └── index.jsx : <i>Pokemon details page</i>
+│   │   ├── ssg : <i>Static site generation</i>
+│   │   │   ├── index.jsx : <i>Pokemons list page</i>
+│   │   │   └── [id]
+│   │   │       └── index.jsx : <i>Pokemon details page</i>
+│   │   └── ssr : <i>Static site generation</i>
+│   │       ├── index.jsx : <i>Pokemons list page</i>
+│   │       └── [id]
+│   │           └── index.jsx : <i>Pokemon details page</i>
+│   └──  styles
+│       ├── globals.css : <i>Reset browser default styles</i>
+│       ├── Navbar.module.css : <i>Navbar component styles</i>
+│       ├── Home.module.css : <i>Home page styles</i>
+│       ├── PokemonList.module.css : <i>Pokemons list page styles</i>
+│       └── PokemonDetails.module.css : <i>Pokemon details page styles</i>
+└── ...
+</pre>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## License
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Distributed under the MIT License.
