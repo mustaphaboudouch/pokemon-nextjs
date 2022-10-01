@@ -1,0 +1,74 @@
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem 0;
+	border-bottom: 1px solid #e2e5e8;
+}
+
+.logo {
+	width: 7rem;
+	font-size: 1.25rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: rgb(79, 70, 229);
+}
+.logo a:last-child {
+	display: none;
+}
+.logo a span {
+	font-weight: 900;
+	color: #000000;
+}
+
+.menu {
+	display: flex;
+	font-weight: 600;
+}
+.menu a {
+	padding: 0.5rem 1rem;
+}
+.menu a:hover {
+	color: rgb(79, 70, 229);
+}
+
+.github {
+	width: 7rem;
+	display: flex;
+	justify-content: flex-end;
+}
+.github a:hover {
+	color: rgb(79, 70, 229);
+}
+.github a svg {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+@media only screen and (max-width: 700px) {
+	.navbar {
+		padding: 1rem 0;
+	}
+
+	.logo {
+		width: 5rem;
+	}
+	.logo a:first-child {
+		display: none;
+	}
+	.logo a:last-child {
+		display: block;
+	}
+
+	.menu a {
+		padding: 0.5rem 0.5rem;
+	}
+
+	.github {
+		width: 5rem;
+	}
+}

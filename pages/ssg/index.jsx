@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
 import Link from 'next/link';
+import Navbar from '../../components/Navbar';
 
 import styles from '../../styles/PokemonList.module.css';
 
@@ -10,6 +11,8 @@ const PokemonList = ({ pokemons }) => {
 			<Head>
 				<title>Pokemon - Static Site Generation</title>
 			</Head>
+
+			<Navbar />
 
 			<main className={styles.container}>
 				<h1 className={styles.title}>Pokemon List</h1>

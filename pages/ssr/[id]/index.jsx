@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
 import Link from 'next/link';
+import Navbar from '../../../components/Navbar';
 
 import styles from '../../../styles/PokemonDetails.module.css';
 
@@ -12,6 +13,8 @@ const PokemonDetails = ({ pokemon }) => {
 			<Head>
 				<title>Pokemon - Server Side Rendering</title>
 			</Head>
+
+			<Navbar />
 
 			<main className={styles.container}>
 				<Link href='/ssr'>

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import Navbar from '../../../components/Navbar';
 
 import styles from '../../../styles/PokemonDetails.module.css';
 
@@ -30,6 +31,8 @@ const PokemonDetails = () => {
 			<Head>
 				<title>Pokemon - Client Side Rendering</title>
 			</Head>
+
+			<Navbar />
 
 			<main className={styles.container}>
 				<Link href='/csr'>

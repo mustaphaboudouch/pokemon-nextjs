@@ -2,6 +2,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import Navbar from '../../components/Navbar';
 
 import styles from '../../styles/PokemonList.module.css';
 
@@ -24,6 +25,8 @@ const PokemonList = () => {
 			<Head>
 				<title>Pokemon - Client Side Rendering</title>
 			</Head>
+
+			<Navbar />
 
 			<main className={styles.container}>
 				<h1 className={styles.title}>Pokemon List</h1>
