@@ -39,7 +39,7 @@ const Home = () => {
 							</svg>
 						</a>
 					</Link>
-					<Link href='#'>
+					<Link href='/ssr'>
 						<a>
 							Server Side Rendering
 							<svg
