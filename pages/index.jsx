@@ -17,7 +17,7 @@ const Home = () => {
 					Pokemon App using different forms of Pre-rendering in NextJS
 				</p>
 				<nav className={styles.links}>
-					<Link href='#'>
+					<Link href='/csr'>
 						<a>
 							Client Side Rendering
 							<svg
